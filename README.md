@@ -5,7 +5,7 @@ My lab environment running in MS Azure
 >Domain: smhcomputers.com
 
 # VMs: 
-![Alt text](image.png)
+![Alt text](image-2.png)
 
 # VM Specifications:
 ![Alt text](image-1.png)
