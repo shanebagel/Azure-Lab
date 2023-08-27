@@ -5,10 +5,10 @@ My lab environment running in MS Azure
 >Domain: smhcomputers.com
 
 # VMs: 
-![Alt text](image-2.png)
+![Alt text](image.png)
 
 # VM Specifications:
-![Alt text](image-3.png)
+![Alt text](image2.png)
 
 # Azure Tenant:
 
