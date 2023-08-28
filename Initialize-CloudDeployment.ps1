@@ -1,5 +1,3 @@
-
-
 function Intialize-CloudDeployment {
 
 <#
@@ -292,10 +290,4 @@ Run each function individually
     $Nic | Set-AzNetworkInterfaceIpConfig -Name ipconfig1 -PublicIPAddress $PubIP -Subnet $Subnet
     $Nic | Set-AzNetworkInterface
     
-    # Finish Rules   
-    # Add-AzMetricAlertRuleV2 -Name "Machine has been online longer than 2 hours" -ResourceGroupName $ResourceGroup -WindowSize 0:5 -Frequency 0:5 -TargetResourceScope "/subscriptions/4837e608-9665-4f4e-9625-c7a126e8d363/resourceGroups/ShaneRG/providers/Microsoft.Compute/virtualMachines/ShaneSVR" -TargetResourceType "Microsoft.Compute/virtualMachines" -TargetResourceRegion "EastUS" -Severity 4 -Action $Action -Condition
-
-    # On ShaneSVR - copy the configuration from Shaneserver on-prem, and do the same for the SQL server - copy config from shaneserver2
-    # Setup the ShaneVM with everything documented in new computer setup
-
-}
+} # End function
