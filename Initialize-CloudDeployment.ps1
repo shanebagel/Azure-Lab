@@ -1,20 +1,46 @@
-# Creates 1 automation account - ShaneAA - Done
-# Creates 1 key vault - ShaneHKV - Done
-# Creates 1 DC server  installed roles on it DNS:RSAT: - AD Connect is running on here, remove locally,
-# Creates 1 server for SQL  install roles SQL, and SSMS - ShaneSQL install roles File
-# Creates 1 linux server - ShaneLX
-# Creates 1 linux server - ShaneLX2
-# Creates 1 resource group - ShaneRG - Done
-# Creates 1 virtual network and 1 virtual subnet - ShaneVN - Done
-# Creates NSGs to control inbound and outbound traffic - Scopes at the Subnet-level
-# Storage account - Creates 1 storage account
+
+
+function Intialize-CloudDeployment {
+
+<#
+.SYNOPSIS
+Initializes an azure environment, including a vNet, Virtual Machines, storage account, and various other Azure services
+
+.DESCRIPTION
+Script configures a full azure lab environment
+Provisions a vNet, 4 VMs, key vault, automation account, NSG (exists at subnet-level), and storage account
+
+Creates 1 automation account - ShaneAA
+Creates 1 key vault - ShaneHKV
+Creates 1 windows DC server - roles DNS, RSAT
+Creates 1 windows server for SQL - roles SQL, and SSMS
+Creates 1 linux server - ShaneLX
+Creates 1 linux server - ShaneLX2
+Creates 1 resource group - ShaneRG
+Creates 1 virtual network and 1 virtual subnet - ShaneVNET
+Creates 1 NSG to control inbound and outbound traffic - Scoped at the Subnet-level
+Creates 1 storage account - ShaneSTO
+
+.PARAMETER Credential
+Specifies a credential object, this is the credential that is set on each VM that is provisioned
+
+.EXAMPLE
+Create core deployment
+Initialize-CloudDeployment -Credential $Credential
+
+.EXAMPLE
+Create VM
+Initialize-ShaneSVR
+
+.NOTES
+Run each function individually
 
 # ShaneSVR - Web server, domain controller, DNS, FTP. ad.smhcomputers.com for domain - AD connect runs from, remove AD connect from local lab
 # ShaneSQL - Database Server, file server
 # ShaneLX - Linux server 
 # ShaneLX2 - Secondary Linux server
 
-function Intialize-CloudDeployment {
+#>
 
     [CmdletBinding()]
     Param (

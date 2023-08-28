@@ -1,8 +1,7 @@
 # Azure-Lab Configuration
 
-My lab environment running in MS Azure
-
->Domain: smhcomputers.com
+Script that configures a full azure lab environment
+Provisions a vNet, 4 VMs, key vault, automation account, NSG, and storage account
 
 # VMs: 
 ![Alt text](image.png)
